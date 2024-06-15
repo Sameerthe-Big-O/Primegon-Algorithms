@@ -106,6 +106,7 @@ class LinkList {
     };
     let currenNode = this.head;
     let previousNode = null;
+
     for (let index = 0; index < this.length; index++) {
       if (idx === index) {
         newNode.next = currenNode;
@@ -115,6 +116,26 @@ class LinkList {
       }
       previousNode = currenNode;
       currenNode = currenNode.next;
+    }
+  }
+  inserWithOtherMethod(index){
+    const newNode = {
+      value: value,
+      next: null,
+    };
+    //*this method seems to be easy but requires more boilercode as in this method we don't have to use the two pointer approach
+    const previusOne=this.traversetoIndex(index-1);
+    const pointerHolder=previusOne.next;
+    newNode.next = pointerHolder
+    this.length++;
+    return this.getList();
+  }
+  traversetoIndex(index){
+    let counter=0;
+    let currenNode = this.head;
+    while(counter !== index){
+      currenNode= currenNode.next;
+      counter++;
     }
   }
   delete(idx) {
@@ -152,3 +173,26 @@ class LinkList {
     }
   }
 }
+
+
+//*another simple approach for inserting and deleting is that we get the previous node after the actuall index want to remove or add
+
+//*hints:when deleting we connect the node that's previously to the node we about to remove to the node that's next to the node we're about to remove minds hurts?
+
+
+//here's the diagram
+
+
+
+//*imagine that we want to remove middle want now first we'll assign the next of previous to the address of next of middle node 
+
+//i know it's hard to imagine that's why i made this diagram
+
+//*previous.next=currenNode.next; we're made the connection 
+//*now remove the middle node current.next=null
+34
+23232---->
+          232
+          adaa----->
+                   1
+                   aada
