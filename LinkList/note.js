@@ -32,42 +32,154 @@
 
 //here is the example to append and prepend the item in the list
 
-class LinkList {
-  constructor(value) {
-    this.head = {
-      value: value,
-      next: null,
-    };
-    this.tail = this.head;
-    this.length = 1;
-  }
-  prepend(value) {
-    let node = {
-      value: value,
-      next: this.head,
-    };
-    this.head = node;
-    this.length++;
-    return this.head;
-  }
-  appened(value) {
-    let node = {
-      value: value,
-      next: null,
-    };
-    this.tail.next = node;
-    this.tail = node;
-    this.length++;
-    return this.tail;
-  }
-}
+// class LinkList {
+//   constructor(value) {
+//     this.head = {
+//       value: value,
+//       next: null,
+//     };
+//     this.tail = this.head;
+//     this.length = 1;
+//   }
+//   prepend(value) {
+//     let node = {
+//       value: value,
+//       next: this.head,
+//     };
+//     this.head = node;
+//     this.length++;
+//     return this.getList();
+//   }
+//   append(value) {
 
-//*proper inser and delete methods
-class LinkList {
+//     let node = {
+//       value: value,
+//       next: null,
+//     };
+//     this.tail.next = node;
+//     this.tail = node;
+//     this.length++;
+//     return this.getList();
+//   }
+//   insert(value, idx) {
+//     if (idx >= this.length) {
+//       //*chec for append
+//       return this.append(value);
+//     }
+//     if (idx === 0) {
+//       //*check for prepend
+//       return this.prepend(value);
+//     }
+//     const newNode = {
+//       value: value,
+//       next: null,
+//     };
+//     let currenNode = this.head;
+//     let previousNode = null;
+
+//     //*reason we can't use here the idx as terminate condition because either we have to use <= otherwise it won't get until we want
+//     for (let index = 0; index < this.length; index++) {
+//       if (idx === index) {
+//         newNode.next = currenNode;
+//         previousNode.next = newNode;
+//         this.length++;
+//         return this.getList();
+//       }
+//       previousNode = currenNode;
+//       currenNode = currenNode.next;
+//     }
+//   }
+//   inserWithOtherMethod(index, value){
+//       if (index >= this.length) {
+//       //*chec for append
+//       return this.append(value);
+//     }
+//     if (index === 0) {
+//       //*check for prepend
+//       return this.prepend(value);
+//     }
+//     const newNode = {
+//       value: value,
+//       next: null,
+//     };
+//     //*this method seems to be easy but requires more boilercode as in this method we don't have to use the two pointer approach
+//     const previusOne=this.traversetoIndex(index-1);
+//     const pointerHolder=previusOne.next;
+//     newNode.next = pointerHolder
+//     this.length++;
+//     return this.getList();
+//   }
+//   traversetoIndex(index){
+//     let counter=0;
+//     let currenNode = this.head;
+//     while(counter !== index){
+//       currenNode= currenNode.next;
+//       counter++;
+//     }
+//     return currenNode;
+//   }
+//   delete(idx) {
+//     let currenNode = this.head;
+//     let previousNode = null;
+//     for (let index = 0; index < this.length; index++) {
+//       if (idx === index) {
+//         previousNode.next = currenNode.next;
+//         currenNode.next = null;
+//         this.length--;
+//         return this.getList();
+//       }
+//       previousNode = currenNode;
+//       currenNode = currenNode.next;
+//     }
+//   }
+//   getList() {
+//     const values = [];
+//     let initiazler = 0;
+//     let currenNode = this.head;
+//     while (initiazler < this.length) {
+//       console.log(currenNode);
+//       values.push(currenNode.value);
+//       currenNode = currenNode.next;
+//       initiazler++;
+//     }
+//     return values;
+//   }
+//   traverse() {
+//     let initiazler = 0;
+//     let currenNode = this.head;
+//     while (initiazler < this.length) {
+//       console.log(currenNode.value);
+//       currenNode = currenNode.next;
+//       initiazler++;
+//     }
+//   }
+// };
+
+//*another simple approach for inserting and deleting is that we get the previous node after the actuall index want to remove or add
+
+//*hints:when deleting we connect the node that's previously to the node we about to remove to the node that's next to the node we're about to remove minds hurts?
+
+//here's the diagram
+
+//*imagine that we want to remove middle want now first we'll assign the next of previous to the address of next of middle node
+
+//i know it's hard to imagine that's why i made this diagram
+
+//*previous.next=currenNode.next; we're made the connection
+//*now remove the middle node current.next=null
+34;
+// 23232---->
+//           232
+//           adaa----->
+//                    1
+//                    aada
+
+class DoublyLinkList {
   constructor(value) {
     this.head = {
       value: value,
       next: null,
+      pre: null,
     };
     this.tail = this.head;
     this.length = 1;
@@ -76,7 +188,9 @@ class LinkList {
     let node = {
       value: value,
       next: this.head,
+      pre: null,
     };
+    this.head.pre = node;
     this.head = node;
     this.length++;
     return this.getList();
@@ -85,7 +199,9 @@ class LinkList {
     let node = {
       value: value,
       next: null,
+      pre: this.tail,
     };
+
     this.tail.next = node;
     this.tail = node;
     this.length++;
@@ -103,10 +219,12 @@ class LinkList {
     const newNode = {
       value: value,
       next: null,
+      next: null,
     };
     let currenNode = this.head;
     let previousNode = null;
 
+    //*reason we can't use here the idx as terminate condition because either we have to use <= otherwise it won't get until we want
     for (let index = 0; index < this.length; index++) {
       if (idx === index) {
         newNode.next = currenNode;
@@ -118,33 +236,54 @@ class LinkList {
       currenNode = currenNode.next;
     }
   }
-  inserWithOtherMethod(index){
+  inserWithOtherMethod(index, value) {
+    if (index >= this.length) {
+      //*chec for append
+      return this.append(value);
+    }
+    if (index === 0) {
+      //*check for prepend
+      return this.prepend(value);
+    }
     const newNode = {
       value: value,
       next: null,
+      next: null,
     };
+
     //*this method seems to be easy but requires more boilercode as in this method we don't have to use the two pointer approach
-    const previusOne=this.traversetoIndex(index-1);
-    const pointerHolder=previusOne.next;
-    newNode.next = pointerHolder
+    const previusOne = this.traversetoIndex(index - 1);
+    const nextHolder = previusOne.next;
+
+    previusOne.next = newNode;
+    newNode.pre = previusOne;
+    newNode.next = pointerHolder;
+    nextHolder.pre = newNode;
+
     this.length++;
     return this.getList();
   }
-  traversetoIndex(index){
-    let counter=0;
+  traversetoIndex(index) {
+    let counter = 0;
     let currenNode = this.head;
-    while(counter !== index){
-      currenNode= currenNode.next;
+    while (counter !== index) {
+      currenNode = currenNode.next;
       counter++;
     }
+    return currenNode;
   }
   delete(idx) {
     let currenNode = this.head;
     let previousNode = null;
     for (let index = 0; index < this.length; index++) {
       if (idx === index) {
+        const nextHolderRemoveItem = currenNode.next;
+        const previousHolderRemoveItem = currenNode.previousHolder;
         previousNode.next = currenNode.next;
+        nextHolderRemoveItem.pre = previousHolderRemoveItem;
+
         currenNode.next = null;
+        currenNode.pre = null;
         this.length--;
         return this.getList();
       }
@@ -157,11 +296,23 @@ class LinkList {
     let initiazler = 0;
     let currenNode = this.head;
     while (initiazler < this.length) {
+      console.log(currenNode);
       values.push(currenNode.value);
       currenNode = currenNode.next;
       initiazler++;
     }
     return values;
+  }
+  reverse() {
+    let currenNode = this.tail;
+    let counter = this.length;
+    const nodeArray = [];
+    while (counter > 0) {
+      console.log(currenNode.value);
+      nodeArray.push(currenNode.value);
+      currenNode = currenNode.pre;
+      counter--;
+    }
   }
   traverse() {
     let initiazler = 0;
@@ -173,26 +324,3 @@ class LinkList {
     }
   }
 }
-
-
-//*another simple approach for inserting and deleting is that we get the previous node after the actuall index want to remove or add
-
-//*hints:when deleting we connect the node that's previously to the node we about to remove to the node that's next to the node we're about to remove minds hurts?
-
-
-//here's the diagram
-
-
-
-//*imagine that we want to remove middle want now first we'll assign the next of previous to the address of next of middle node 
-
-//i know it's hard to imagine that's why i made this diagram
-
-//*previous.next=currenNode.next; we're made the connection 
-//*now remove the middle node current.next=null
-34
-23232---->
-          232
-          adaa----->
-                   1
-                   aada
