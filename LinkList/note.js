@@ -257,7 +257,7 @@ class DoublyLinkList {
 
     previusOne.next = newNode;
     newNode.pre = previusOne;
-    newNode.next = pointerHolder;
+    newNode.next = nextHolder;
     nextHolder.pre = newNode;
 
     this.length++;
@@ -277,6 +277,7 @@ class DoublyLinkList {
     let previousNode = null;
     for (let index = 0; index < this.length; index++) {
       if (idx === index) {
+        //*basically getting the next and previous reference of the index we want to remove
         const nextHolderRemoveItem = currenNode.next;
         const previousHolderRemoveItem = currenNode.previousHolder;
         previousNode.next = currenNode.next;
@@ -313,6 +314,7 @@ class DoublyLinkList {
       currenNode = currenNode.pre;
       counter--;
     }
+    return nodeArray;
   }
   traverse() {
     let initiazler = 0;
