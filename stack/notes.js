@@ -21,6 +21,24 @@
 
 //*property access on the js may not the constant time remember that shit
 
+
+//*complete example of stack with Linked List 
+
+
+//*step 1:
+
+//pop:remember that in the stack we the last item will be the first oine means that when we we say last item means that's actually the head of our stack means we use the terms opposite the first one we say as the tail and last one we refer as the head 
+---- //this is the head of our stack
+----
+---- //this is the tail of our stack
+
+//*push first we grab the head means tha last item and save it in a variable
+//*pop then we mark the new item as ahte head this.head=newNode
+//*then we mark  next of new head to previous head 
+
+
+
+//!the best way to learn is actually br wrting on the paper
 class Stack {
   constructor(value) {
     const node = {

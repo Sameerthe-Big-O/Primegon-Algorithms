@@ -41,3 +41,35 @@
         h.next = undefined;
 
 */
+
+
+class Queue{
+    constructor(value) {
+      const node = {
+        value: value,
+        next: null,
+      };
+      this.head = node;
+      this.tail = this.head;
+      let length = 1;
+    }
+    enqueue(value){
+       const node = {
+        value: value,
+        next: null,
+      };
+      const previous=this.tail;
+      this.tail=node;
+      previous.next=this.tail;  
+       return this; 
+  }
+  dequeue(){
+     const newHead=this.head.next;
+     this.head.next=null;
+     this.head=newHead;
+     return this 
+  }
+  peek(){
+    return this.head;  
+  }
+  }

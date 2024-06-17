@@ -42,3 +42,38 @@ ins=a+width*offset
 
 
 //*write and gettting is O(1)
+
+
+class MyArray{
+    constructor(){
+       this.length=0;
+        this.data={}
+    }
+     get(idx){
+       return this.data[idx]
+     }
+      push(item){
+      this.data[this.length]=item;
+      this.length++; 
+      return this.length   
+      }
+      pop(){
+      const lastIitem=this.data[this.length-1];
+      delete this.data[this.length-1]   
+      this.length--; 
+      return lastIitem;   
+      }
+      delete(idx){
+      const item=this.data[idx];   
+      this.shitIfTems(idx);
+       return item    
+      }
+      shitIfTems(index){
+         for (let i = index; i < this.length-1; i++) {
+               this.data[i]=this.data[i+1]   
+          };
+         delete this.data[this.length-1];
+        this.length--;
+
+      }
+    }
