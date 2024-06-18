@@ -39,48 +39,75 @@
 
 
 //!the best way to learn is actually br wrting on the paper
+
+//*arrays allows us the cache location which makes accessing mucch more faster then using with linked list because elements are right next to each other.
+
+//*while linked are scattre in the memeory so that's why we have to traverse to get the element 
+
+//*while link list also takes more variables because we have to manage those pointer
+
+//*arrays are  bad at insertion or deletion  because arrays are static arrays so language make another copy of that array means doubel the space
+
+//!question new array cause other to be garbadge collected
+
+
+//*if we change the index then it'd have to move all the indexs of tha previous array item
+
+
+
+//*one of the prominant example of stack is undo and redo we use on the daily bases
+
+
+//*eg whatever you're writing if just do the backspace key press it'll pop the thing you typed most recent and will take you to the element that was second latest character and if you want to go the the thing that you typed first then you'll have press the backspace key until you actually go back to the character you typed means that the first character you typed becomes the last character
+
+
+//*another example is let's imagine that you've open browser you you've typed youtube it takes you to youtube but if you click on the other link that takes you to the anohte website but now you want to go back to youtune you click back under the hood you pop the latest element which's website you went when you clicked on link
+
 class Stack {
   constructor(value) {
-    const node = {
-      value: value,
-      next: null,
-    };
-    this.head = node;
-    this.tail = this.head;
-    let length = 1;
+  const node = {
+  value: value,
+  next: null,
+  };
+  this.head = node;
+  this.tail = this.head;
+  let length = 1;
   }
   push(value) {
-    const newNode = {
-      value: value,
-      next: null,
-    };
-    const previousHeader = this.head;
-    this.head = newNode;
-    this.head.next = previousHeader;
-    this.length++;
-    console.log(this.getStackTracer());
-    return this;
+  const newNode = {
+  value: value,
+  next: null,
+  };
+  const previousHeader = this.head;
+  this.head = newNode;
+  this.head.next = previousHeader;
+  this.length++;
+  console.log(this.getStackTracer());
+  return this;
   }
   pop() {
-    const currentHead = this.head;
-    this.head = this.head.next;
-    currentHead.next = null;
-    this.length--;
-    console.log(this.getStackTracer());
-    return this;
+  if(!this.head){
+  return null;
+  }
+  const currentHead = this.head;
+  this.head = this.head.next;
+  currentHead.next = null;
+  this.length--;
+  console.log(this.getStackTracer());
+  return this;
   }
   peek() {
-    return this.head;
+  return this.head;
   }
   getStackTracer() {
-    let counter = 0;
-    const arrayOfFunctions = [];
-    let currentNode = this.head;
-    while (counter < this.length) {
-      arrayOfFunctions.push(currentNode.value);
-      currentNode = currentNode.next;
-      counter++;
-    }
-    return arrayOfFunctions;
+  let counter = 0;
+  const arrayOfFunctions = [];
+  let currentNode = this.head;
+  while (counter < this.length) {
+  arrayOfFunctions.push(currentNode.value);
+  currentNode = currentNode.next;
+  counter++;
   }
-}
+  return arrayOfFunctions;
+  }
+  }
