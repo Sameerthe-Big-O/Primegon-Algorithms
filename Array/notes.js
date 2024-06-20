@@ -44,8 +44,11 @@ ins=a+width*offset
 //*write and gettting is O(1)
 
 
+
+//*here is the example of manually creating an array for the better understanding of
 class MyArray{
     constructor(){
+       //*remember that array indexe are start from 0 
        this.length=0;
         this.data={}
     }
@@ -53,11 +56,18 @@ class MyArray{
        return this.data[idx]
      }
       push(item){
+
+      //*what this is saying is that add the item at 0 index but then increase the length means when array length is 1 means that means that we've one item at 0 index since we know that in computer science it usually starts at 0 index  so
+                                     0
+      //*is arr=[], arr.push(1) = arr[1]
+      
       this.data[this.length]=item;
       this.length++; 
       return this.length   
       }
       pop(){
+
+      //*pop is same just remove the item from the last remember that for the we'd do length-1 because array elements are located i index or number less  
       const lastIitem=this.data[this.length-1];
       delete this.data[this.length-1]   
       this.length--; 
@@ -77,3 +87,31 @@ class MyArray{
 
       }
     }
+
+
+//!push cost: O(1) time
+//!unshift cost: O(n) since all the indexes have to shift 
+//!insertion expect at the end cause us the O(n);
+
+
+
+
+
+    //!questions
+//     I would like to confirm something that's related to array, especially around Big O()
+// Since we know that array are technically not growable means we don't get to grow the arrays in most programming languages they are created with fixed size Like `C`
+
+// but js allows us to add dynamically right :
+// but under the hood, it's done by copying all the previous elements and adding a new element into a new memory location means that it can cost us `O(n)` as i've seen in most articles 
+// (now this O(n)) is for both time complexity and space complexity?
+
+// two questions confirmation:
+
+// ```js
+// let arr=[1];
+// arr. push(2);//question now that we add new item means a new array in memory will get created with a previous values and new value [1,2]
+
+// //!when the new array is created with an update value Aka dynamic the previous will get garbage collected automatically?
+
+// second thing i want to confirm if this is the case then why adding at the end would cost us O(1) i mean it
+```

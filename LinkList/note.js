@@ -32,128 +32,128 @@
 
 //here is the example to append and prepend the item in the list
 
-// class LinkList {
-//   constructor(value) {
-//     this.head = {
-//       value: value,
-//       next: null,
-//     };
-//     this.tail = this.head;
-//     this.length = 1;
-//   }
-//   prepend(value) {
-//     let node = {
-//       value: value,
-//       next: this.head,
-//     };
-//     this.head = node;
-//     this.length++;
-//     return this.getList();
-//   }
-//   append(value) {
+class LinkList {
+  constructor(value) {
+    this.head = {
+      value: value,
+      next: null,
+    };
+    this.tail = this.head;
+    this.length = 1;
+  }
+  prepend(value) {
+    let node = {
+      value: value,
+      next: this.head,
+    };
+    this.head = node;
+    this.length++;
+    return this.getList();
+  }
+  append(value) {
 
-//     let node = {
-//       value: value,
-//       next: null,
-//     };
-//     this.tail.next = node;
-//     this.tail = node;
-//     this.length++;
-//     return this.getList();
-//   }
-//   insert(value, idx) {
-//     if (idx >= this.length) {
-//       //*chec for append
-//       return this.append(value);
-//     }
-//     if (idx === 0) {
-//       //*check for prepend
-//       return this.prepend(value);
-//     }
-//     const newNode = {
-//       value: value,
-//       next: null,
-//     };
-//     let currenNode = this.head;
-//     let previousNode = null;
+    let node = {
+      value: value,
+      next: null,
+    };
+    this.tail.next = node;
+    this.tail = node;
+    this.length++;
+    return this.getList();
+  }
+  insert(value, idx) {
+    if (idx >= this.length) {
+      //*chec for append
+      return this.append(value);
+    }
+    if (idx === 0) {
+      //*check for prepend
+      return this.prepend(value);
+    }
+    const newNode = {
+      value: value,
+      next: null,
+    };
+    let currenNode = this.head;
+    let previousNode = null;
 
-//     //*reason we can't use here the idx as terminate condition because either we have to use <= otherwise it won't get until we want
-//     for (let index = 0; index < this.length; index++) {
-//       if (idx === index) {
-//         newNode.next = currenNode;
-//         previousNode.next = newNode;
-//         this.length++;
-//         return this.getList();
-//       }
-//       previousNode = currenNode;
-//       currenNode = currenNode.next;
-//     }
-//   }
-//   inserWithOtherMethod(index, value){
-//       if (index >= this.length) {
-//       //*chec for append
-//       return this.append(value);
-//     }
-//     if (index === 0) {
-//       //*check for prepend
-//       return this.prepend(value);
-//     }
-//     const newNode = {
-//       value: value,
-//       next: null,
-//     };
-//     //*this method seems to be easy but requires more boilercode as in this method we don't have to use the two pointer approach
-//     const previusOne=this.traversetoIndex(index-1);
-//     const pointerHolder=previusOne.next;
-//     newNode.next = pointerHolder
-//     this.length++;
-//     return this.getList();
-//   }
-//   traversetoIndex(index){
-//     let counter=0;
-//     let currenNode = this.head;
-//     while(counter !== index){
-//       currenNode= currenNode.next;
-//       counter++;
-//     }
-//     return currenNode;
-//   }
-//   delete(idx) {
-//     let currenNode = this.head;
-//     let previousNode = null;
-//     for (let index = 0; index < this.length; index++) {
-//       if (idx === index) {
-//         previousNode.next = currenNode.next;
-//         currenNode.next = null;
-//         this.length--;
-//         return this.getList();
-//       }
-//       previousNode = currenNode;
-//       currenNode = currenNode.next;
-//     }
-//   }
-//   getList() {
-//     const values = [];
-//     let initiazler = 0;
-//     let currenNode = this.head;
-//     while (initiazler < this.length) {
-//       console.log(currenNode);
-//       values.push(currenNode.value);
-//       currenNode = currenNode.next;
-//       initiazler++;
-//     }
-//     return values;
-//   }
-//   traverse() {
-//     let initiazler = 0;
-//     let currenNode = this.head;
-//     while (initiazler < this.length) {
-//       console.log(currenNode.value);
-//       currenNode = currenNode.next;
-//       initiazler++;
-//     }
-//   }
-// };
+    //*reason we can't use here the idx as terminate condition because either we have to use <= otherwise it won't get until we want
+    for (let index = 0; index < this.length; index++) {
+      if (idx === index) {
+        newNode.next = currenNode;
+        previousNode.next = newNode;
+        this.length++;
+        return this.getList();
+      }
+      previousNode = currenNode;
+      currenNode = currenNode.next;
+    }
+  }
+  inserWithOtherMethod(index, value){
+      if (index >= this.length) {
+      //*chec for append
+      return this.append(value);
+    }
+    if (index === 0) {
+      //*check for prepend
+      return this.prepend(value);
+    }
+    const newNode = {
+      value: value,
+      next: null,
+    };
+    //*this method seems to be easy but requires more boilercode as in this method we don't have to use the two pointer approach
+    const previusOne=this.traversetoIndex(index-1);
+    const pointerHolder=previusOne.next;
+    newNode.next = pointerHolder
+    this.length++;
+    return this.getList();
+  }
+  traversetoIndex(index){
+    let counter=0;
+    let currenNode = this.head;
+    while(counter !== index){
+      currenNode= currenNode.next;
+      counter++;
+    }
+    return currenNode;
+  }
+  delete(idx) {
+    let currenNode = this.head;
+    let previousNode = null;
+    for (let index = 0; index < this.length; index++) {
+      if (idx === index) {
+        previousNode.next = currenNode.next;
+        currenNode.next = null;
+        this.length--;
+        return this.getList();
+      }
+      previousNode = currenNode;
+      currenNode = currenNode.next;
+    }
+  }
+  getList() {
+    const values = [];
+    let initiazler = 0;
+    let currenNode = this.head;
+    while (initiazler < this.length) {
+      console.log(currenNode);
+      values.push(currenNode.value);
+      currenNode = currenNode.next;
+      initiazler++;
+    }
+    return values;
+  }
+  traverse() {
+    let initiazler = 0;
+    let currenNode = this.head;
+    while (initiazler < this.length) {
+      console.log(currenNode.value);
+      currenNode = currenNode.next;
+      initiazler++;
+    }
+  }
+};
 
 //*another simple approach for inserting and deleting is that we get the previous node after the actuall index want to remove or add
 
