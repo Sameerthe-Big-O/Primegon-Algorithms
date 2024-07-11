@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+  <script src="">
+    class Node {
+  constructor(value) {
+    this.left = null;
+    this.right = null;
+    this.value = value;
+  }
+}
+
+
+
+class BinarySearchTree {
+  constructor() {
+    this.root = null;
+  }
+
+  //*Two thing are important for insertion
+  /***
+      1:update the current node and keep trac
+      2:*if the value < current node value then go to the left curr=curr.left
+      2:*if the value > current node value then go to the right curr=curr.right
+  ***/
+  insert(value) {
+    const newNode = new Node(value);
+    if (this.root === null) {
+      this.root = newNode;
+    }
+    else {
+      let currenNode = this.root;
+      const newNode = new Node(value);
+      let condition = true;
+      while (condition) {
+        //left side 
+        if (value < currenNode.value) {
+          if (currenNode.left !== null) {
+            currenNode = currenNode.left;
+            continue;
+          } else {
+            currenNode.left = newNode;
+            condition = false;
+          }
+        }
+
+        //right side
+        if (value > currenNode.value) {
+          if (currenNode.right !== null) {
+            console.log(currenNode.right)
+            currenNode = currenNode.right;
+            continue;
+          } else {
+            currenNode.right = newNode;
+            condition = false;
+          }
+        }
+      }
+    }
+
+  }
+  lookup(value) {
+    if (!this.root) {
+      return 'tree is empty'
+    }
+    let currentNode = this.root
+    while (currentNode) {
+      if (currentNode.value === value) {
+        return currentNode;
+      }
+      if (value < currentNode.value) {
+        currentNode = currentNode.left
+      } else {
+        if (value > currentNode.value) {
+          currentNode = currentNode.right;
+        }
+      }
+    }
+    return `the value ${value} doesnt exist in the BST`
+  }
+
+
+  /*when we remove some item we have usually three cases
+  1:one either the node is leaf which's actually very easy beacuas we just have mark that node as 
+   null
+  2:the node has one child which is easy to handle all have to do is just point the parent node to 
+  the child node 
+  */
+  remove(value) {
+    if (!this.root) {
+      return 'tree is empty'
+    }
+    let previousNode = '';
+    let currentNode = this.root;
+    while (currentNode) {
+      if (currentNode.value === value) {
+        if (currentNode.left === null && currentNode.right === null) {
+          currentNode = null;
+          return
+        }
+      }
+      if (currentNode.left && currentNode.right) {
+        //*do some recursion and solve it
+      }
+
+      // //*here we're simpy assing the child node of delete node to the parent node of delete Node
+      // let holder = currentNode.left ? hodlerVariable = currentNode.left : hodlerVariable 
+      //  =currentNode.right;
+
+
+      if (currentNode)
+        if (value < currentNode.value) {
+          currentNode = currentNode.left
+          previousNode = currentNode
+        } else {
+          if (value > currentNode.value) {
+            currentNode = currentNode.right;
+            previousNode = currentNodes;
+          }
+        }
+    }
+    return `the value ${value} doesnt exist in the BST`
+  }
+}
+
+const tree = new BinarySearchTree();
+// tree.insert(9);
+// tree.insert(4);
+// tree.insert(6);
+// tree.insert(20);
+// tree.insert(170);
+// tree.insert(15);
+// tree.insert(1);
+// // tree.remove(170);
+// console.log(tree.lookup(20));
+// // JSON.stringify(traverse(tree.root))
+// // console.log(tree.lookup(20));
+// //     9
+// //  4     20
+// //1  6  15  170
+
+// function traverse(node) {
+//   const tree = { value: node.value };
+//   tree.left = node.left === null ? null : traverse(node.left);
+//   tree.right = node.right === null ? null : traverse(node.right);
+//   return tree;
+// }
+  </script>  
+</body>
+</html>

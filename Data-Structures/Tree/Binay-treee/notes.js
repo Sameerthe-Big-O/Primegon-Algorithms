@@ -15,16 +15,20 @@
                      if we somehow avoids visiting the every node even that's on very bottom
                      O(log n) time complexity
 
-                     we can calculate level of node on each level
+                     we can calculate level of node o
+                     n each level
                      by uisng math like the =2*level
-                     !start from the 0 index as well
+                     !start from the 0 index as well as arrays
                      eg:level:0: 2*0 =1 means one node only
                      eg:level:1: 2*1 =2 means two node only
                      eg:level:2: 2*2 =4 means four node only
                      eg:level:2: 2*3 =8 means eight node only
-
+                     !but overall length start from 1 like if we have 3 level means total number of nodes node=2*3-1;
+                     !so we have 2*3-1=7 means 7 node only
+                     !so we have 2*4-1=15 means 15 node only
+                     but the index is like 0,1,2 for binary tree that has 3 levels
                      # of nodes = 2*h-1,because we start form the 0 index
-                     log nodes=step || level number of steps 
+                     log nodes=step || level number of steps   
 
                      basically log(8)=3 what does this means is that it'd take 3  operation to search for it normally either in array or in some other way
 
@@ -43,6 +47,10 @@
                         {\displaystyle 10} of 1000 is 3, or log10 (1000) = 3. 
 
                      meaning that if we had 8 item in array and we want to search it then we'd have to search every element of the array,but since we're using the tree and especially the binary which's perfect.When our number of operations would be reduce to 3 why because it'd search through level
+
+                     basically in binary tree the height is our number of steps it has to perfrom which are O(log n) but with some coditional
+
+                     !when we perform binary search in an array then we follow the divide and conquer approach
                      
                     
 
@@ -65,8 +73,17 @@
 //!insert
 //!delete
 
+
+
+//!now two referene can points to the same node
+// better then O(n)
+// Ordered 
+// flexible Size
+
 function BinaryTreeNode(value) {
   this.Value = value;
   this.left = null;
   this.right = null;
 }
+
+

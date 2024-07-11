@@ -9,7 +9,7 @@
                                         /-\
 
     you see that the right get pretty heavy right and now if we want to item at the last we'd have to travers like linked list
-//*we can solve this problem by using the balanced tree like AVL or red black tree
+  //*we can solve this problem by using the balanced tree like AVL or red black tree
 
 
     Balance tree
@@ -18,7 +18,6 @@
                       /-\      /-\ 
                     /-\ /-\   /-\ /-\
 
-    
-
+    see that in this example tree is balanced
 
 */
