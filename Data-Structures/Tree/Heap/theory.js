@@ -38,6 +38,9 @@
   and in the last level elements are filled from left to right
   means that that in the last level if there's no one node of previous parent then it should be left not to the right if both are there that be okay too 
 
+  !height of complete binary tree will be logn();
+
+  !we can represent the not-complete binary tree in an array but then we have to put gap, where nodes aren't there so basically we've to use 
   don't worry i've included the example below with diagram
 */
 
@@ -114,6 +117,16 @@ Conclusion So, a Full Binary Tree is also a Complete Binary Tree. But the conver
 ref:https://stackoverflow.com/questions/12359660/difference-between-complete-binary-tree-strict-binary-tree-full-binary-tre/32064101#32064101
 */
 
+/*
+
+   !notice that heap is complete binary tree
+
+   !max heap (first it must satisfy it's a compelete binary tree then each node value must be either equal or greater than the child one's) duplicates are allowed here
+    laregest will be root node
+   !min heap (first it must satisfy it's a compelete binary tree then each node value must be either equal or less than the child one's) duplicates are allowed here
+    smallest will be root node
+
+*/
 //!quick revesiuion
 
 /*

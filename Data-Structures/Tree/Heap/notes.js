@@ -1,6 +1,9 @@
 //*heap
 
-//*full binary tree means that expect the lead node there will be no node who will have 0 children
+//*full binary tree means that expect the leaf node there will be no node who will have 0 children
+
+//*where the complete binary tree there's no such that a node can have one node even that's not leaf node.One more thing to remember is that in complete binary tree nodes are placed in a order from left to right
+
 //*when a value means that it can be anything like a person name or a number or any type of data we want to store in it
 
 //*a bianry heap itself is a tree where the node are placed in the way that there should be restrictions iike the node we want to either should less then or greater then parent
