@@ -29,24 +29,24 @@ Check the README.md files in each folder for detailed explanations and example u
 Run the Code<br>
 
 Ensure you have the necessary programming language environment set up.
-Follow the instructions in each problem's folder to execute the code samples.<br>
-📚 Features
+Follow the instructions in each problem's folder to execute the code samples.<br> <br>
+📚 Features .<br> 
 Comprehensive Coverage: Detailed explanations of core concepts.
 Code Samples: Well-documented code for practical understanding.
 Practice Problems: A range of problems to test your knowledge.
-Solutions and Explanations: Clear solutions with step-by-step explanations. <br>
+Solutions and Explanations: Clear solutions with step-by-step explanations. <be> <br>
 🤝 Contributing
-Contributions are welcome! If you have suggestions for additional problems, improvements, or fixes, please open an issue or submit a pull request. <br>
+Contributions are welcome! If you have suggestions for additional problems, improvements, or fixes, please open an issue or submit a pull request. <br><br>
 
-Fork the Repository
-Create a New Branch
-Make Your Changes
-Submit a Pull Request
-💡 Tips for Success
+Fork the Repository <br>
+Create a New Branch <br>
+Make Your Changes <br>
+Submit a Pull Request <br>
+💡 Tips for Success <br> 
 Practice Regularly: Consistent practice is key to mastering DSA.
 Understand Concepts: Focus on understanding the underlying concepts rather than just memorizing solutions.
-Solve Problems: Try solving problems on your own before looking at solutions.
-📝 License
+Solve Problems: Try solving problems on your own before looking at solutions. .<br>
+📝 License  <br>
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 📬 Contact
