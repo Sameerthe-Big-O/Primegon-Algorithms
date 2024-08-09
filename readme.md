@@ -17,10 +17,9 @@ Dynamic Programming 🎯 <br>
 Clone the Repository<br>
 
 Copy code
-```
-git clone https://github.com/yourusername/dsa-revision.git
-cd dsa-revision
-```<br>
+```git clone https://github.com/yourusername/dsa-revision.git
+cd dsa-revision```
+<br>
 Navigate the Repository
 
 Each folder contains problems and solutions categorized by topic.
