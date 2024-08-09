@@ -36,7 +36,7 @@ Code Samples: Well-documented code for practical understanding.
 Practice Problems: A range of problems to test your knowledge.
 Solutions and Explanations: Clear solutions with step-by-step explanations. <be> <br>
 🤝 Contributing
-Contributions are welcome! If you have suggestions for additional problems, improvements, or fixes, please open an issue or submit a pull request. <br><br>
+Contributions are welcome! If you have suggestions for additional problems or want to add any new topic , example, improvements, or fixes, please open an issue or submit a pull request. <br><br>
 
 Fork the Repository <br>
 Create a New Branch <br>
@@ -44,7 +44,7 @@ Make Your Changes <br>
 Submit a Pull Request <br> <br>
 💡 Tips for Success <br><br>
 Practice Regularly: Consistent practice is key to mastering DSA. <br>
-Understand Concepts: Focus on understanding the underlying concepts rather than just memorizing solutions.<br>
+Understand Concepts: Focus on understanding the underlying concepts rather than just memorizing solutions. <br>
 Solve Problems: Try solving problems on your own before looking at solutions.<br><br>
 📝 License  <br>
 This project is licensed under the MIT License - see the LICENSE file for details.
@@ -53,7 +53,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 If you have any questions or feedback, feel free to reach out:
 
 Email: sameer.ijaz100@example.com
-GitHub: Sameerthe-Big-O
 
 
 This repo is a quick guide for students who want to revise the data structures and algorithms(for junior roles) by Fav pm.
