@@ -30,11 +30,11 @@ Run the Code<br>
 
 Ensure you have the necessary programming language environment set up.
 Follow the instructions in each problem's folder to execute the code samples.<br> <br>
-📚 Features <br> 
-Comprehensive Coverage: Detailed explanations of core concepts.
-Code Samples: Well-documented code for practical understanding.
-Practice Problems: A range of problems to test your knowledge.
-Solutions and Explanations: Clear solutions with step-by-step explanations. <br> <br>
+📚 Features <br> <br>
+Comprehensive Coverage: Detailed explanations of core concepts. <br>
+Code Samples: Well-documented code for practical understanding. <br>
+Practice Problems: A range of problems to test your knowledge. <br>
+Solutions and Explanations: Clear solutions with step-by-step explanations. <br>
 🤝 Contributing <br>
 Contributions are welcome! If you have suggestions for additional problems or want to add any new topic , example, improvements, or fixes, please open an issue or submit a pull request. <br><br>
 
