@@ -41,15 +41,15 @@ Contributions are welcome! If you have suggestions for additional problems, impr
 Fork the Repository <br>
 Create a New Branch <br>
 Make Your Changes <br>
-Submit a Pull Request <br>
-💡 Tips for Success <br> 
-Practice Regularly: Consistent practice is key to mastering DSA.
-Understand Concepts: Focus on understanding the underlying concepts rather than just memorizing solutions.
-Solve Problems: Try solving problems on your own before looking at solutions. .<br>
+Submit a Pull Request <br> <br>
+💡 Tips for Success <br><br>
+Practice Regularly: Consistent practice is key to mastering DSA. <br>
+Understand Concepts: Focus on understanding the underlying concepts rather than just memorizing solutions.<br>
+Solve Problems: Try solving problems on your own before looking at solutions.<br><br>
 📝 License  <br>
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-📬 Contact
+📬 Contact <br>
 If you have any questions or feedback, feel free to reach out:
 
 Email: sameer.ijaz100@example.com
