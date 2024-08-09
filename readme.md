@@ -4,37 +4,38 @@ Welcome to the DSA Revision Repository! This repository is designed to help stud
 🗂️ Contents
 Arrays 📏
 
-Linked Lists 🔗
-Stacks 🏗️
-Queues ⏳
-Trees 🌳
-Graphs 🕸️
-Hashing 🔑
-Sorting Algorithms 🔄
-Searching Algorithms 🔍
-Dynamic Programming 🎯
-🚀 Getting Started
-Clone the Repository
+Linked Lists 🔗 <br>
+Stacks 🏗️ <br>
+Queues ⏳<br>
+Trees 🌳 <br>
+Graphs 🕸️ <br>
+Hashing 🔑 <br>
+Sorting Algorithms 🔄 <br>
+Searching Algorithms 🔍 <br>
+Dynamic Programming 🎯 <br>
+🚀 Getting Started<br>
+Clone the Repository<br>
 
-bash
 Copy code
+```
 git clone https://github.com/yourusername/dsa-revision.git
 cd dsa-revision
+```<br>
 Navigate the Repository
 
 Each folder contains problems and solutions categorized by topic.
 Check the README.md files in each folder for detailed explanations and example usage.
-Run the Code
+Run the Code<br>
 
 Ensure you have the necessary programming language environment set up.
-Follow the instructions in each problem's folder to execute the code samples.
+Follow the instructions in each problem's folder to execute the code samples.<br>
 📚 Features
 Comprehensive Coverage: Detailed explanations of core concepts.
 Code Samples: Well-documented code for practical understanding.
 Practice Problems: A range of problems to test your knowledge.
-Solutions and Explanations: Clear solutions with step-by-step explanations.
+Solutions and Explanations: Clear solutions with step-by-step explanations. <br>
 🤝 Contributing
-Contributions are welcome! If you have suggestions for additional problems, improvements, or fixes, please open an issue or submit a pull request.
+Contributions are welcome! If you have suggestions for additional problems, improvements, or fixes, please open an issue or submit a pull request. <br>
 
 Fork the Repository
 Create a New Branch
