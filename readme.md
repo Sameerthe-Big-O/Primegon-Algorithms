@@ -24,12 +24,11 @@ cd dsa-revision
 <br>
 Navigate the Repository
 
-Each folder contains problems and solutions categorized by topic.
-Check the README.md files in each folder for detailed explanations and example usage.
+Each folder contains problems and solutions categorized by topic.<br>
+Check the README.md files in each folder for detailed explanations and example usage. <br>
 Run the Code<br>
-
-Ensure you have the necessary programming language environment set up.
-Follow the instructions in each problem's folder to execute the code samples.<br> <br>
+Ensure you have the necessary programming language environment set up.<br>
+Follow the instructions in each problem's folder to execute the code samples.<br>
 📚 Features <br> <br>
 Comprehensive Coverage: Detailed explanations of core concepts. <br>
 Code Samples: Well-documented code for practical understanding. <br>
@@ -42,10 +41,10 @@ Fork the Repository <br>
 Create a New Branch <br>
 Make Your Changes <br>
 Submit a Pull Request <br> <br>
-💡 Tips for Success <br><br>
+💡 Tips for Success <br>
 Practice Regularly: Consistent practice is key to mastering DSA. <br>
 Understand Concepts: Focus on understanding the underlying concepts rather than just memorizing solutions. <br>
-Solve Problems: Try solving problems on your own before looking at solutions.<br><br>
+Solve Problems: Try solving problems on your own before looking at solutions.<br>
 📝 License  <br>
 This project is licensed under the MIT License - see the LICENSE file for details.
 
